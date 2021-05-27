@@ -1,4 +1,4 @@
-
+                    
 import './App.css';
 import Button from './Component/Button';
 import Screen from './Component/Screen';
@@ -38,43 +38,43 @@ class App extends Component {
     this.setState({input:"", check:false})
   }
   Add = () => {
-    this.state.prevInput = this.state.input;
+    this.setState({prevInput: this.state.input});
     this.setState({input:""});
-    this.state.operator = "plus"
+    this.setState({operator:"plus"})
   }
   Subtract = () => {
-    this.state.prevInput = this.state.input;
+    this.setState({prevInput: this.state.input});
     this.setState({input:""});
-    this.state.operator = "minus"
+    this.setState({operator:"minus"})
   }
   Multiply = () => {
-    this.state.prevInput = this.state.input;
+    this.setState({prevInput: this.state.input});
     this.setState({input:""});
-    this.state.operator = "multiply"
+    this.setState({operator:"multiply"})
   }
   Devide = () => {
-    this.state.prevInput = this.state.input;
+    this.setState({prevInput: this.state.input});
     this.setState({input:""});
-    this.state.operator = "devide"
+    this.setState({operator:"devide"})
   }
   Evaluation = () => {
     this.state.curInput = this.state.input;
-    if(this.state.operator == "plus"){
+    if(this.state.operator === "plus"){
       this.setState({
         input: parseFloat(this.state.prevInput) + parseFloat(this.state.curInput),
         check: true,
       })
-    }else if(this.state.operator =="minus"){
+    }else if(this.state.operator ==="minus"){
       this.setState({
         input: parseFloat(this.state.prevInput) - parseFloat(this.state.curInput),
         check: true,
       })
-    }else if(this.state.operator =="multiply"){
+    }else if(this.state.operator ==="multiply"){
       this.setState({
         input: parseFloat(this.state.prevInput) * parseFloat(this.state.curInput),
         check: true,
       })
-    }else if(this.state.operator =="devide"){
+    }else if(this.state.operator ==="devide"){
       if(parseInt(this.state.curInput) !== 0)
       {
         this.setState({
