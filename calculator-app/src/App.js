@@ -16,7 +16,7 @@ class App extends Component {
   }
   addToInput = val =>{
     if(this.state.check === true){
-      this.setState({input:"",check:false})
+      this.setState({input: val,check:false})
       
     }else{
       this.setState({input: this.state.input + val});
