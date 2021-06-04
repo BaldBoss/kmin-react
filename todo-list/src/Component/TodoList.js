@@ -21,7 +21,8 @@ export default class App extends React.Component{
     }
     addNewItem = () =>{
         let {task,input}=this.state;
-        task.push(input);
+        // task.push(input);
+        this.setState({task:[...task,input]})
         this.setState({check:false})
     }
     openPopUp = () =>{
