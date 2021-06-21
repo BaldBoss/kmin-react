@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import {
     BrowserRouter as Router,
@@ -8,6 +8,7 @@ import {
     Link
   } from "react-router-dom";
 export default function Info (props) {
+    
     return(
         <div>
             <div className="navBar">

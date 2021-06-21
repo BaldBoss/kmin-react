@@ -31,11 +31,11 @@ export default function Main() {
     
     const closeModal = () =>{
         StatusChangeFail(false)
-        window.location.reload();
+        
     }
     const closeModalWin = () =>{
         StatusChange(false)
-        window.location.reload();
+        
     }
     return (
         <div className="main-warpper">

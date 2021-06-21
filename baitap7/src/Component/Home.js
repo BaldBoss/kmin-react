@@ -66,9 +66,10 @@ export default function Home(props) {
                 <input className="form-control" type="text" onChange={handleRequestChange}></input>
                 <label>Email</label>
                 <input className="form-control" type="Email" onChange={handleEmailChange}></input>
-                <Link to="/Submit" onClick={sendData}><button>Submit</button></Link>
+                <Link to={"/Submit?name="+Name+"&email="+Email} onClick={sendData}><button>Submit</button></Link>
+            
             </form>
-            {Name}
+            
             {Request}
             {Email}
         </div>
